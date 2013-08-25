@@ -1,0 +1,14 @@
+ul.posts
+  - @posts.each do |post|
+    li
+      a href='post/#{post.id}' = post.name
+a href='?page=#{@page.to_i+1}' Next
+a href='?page=#{@page.to_i-1}' Prev
+javascript:
+  $(document).ready(function(){
+    console.log('---jquery ready---');
+    findFuncs();
+  })
+  findFuncs = function(){
+    console.log('+++findFuncs+++');
+  }
